@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
 <html>
   <head>
-    <title>OpenType Overview</title>
+    <title>OpenType 概述</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="STYLESHEET" href="otspec.css" type="text/css">
   </head>
@@ -9,66 +9,66 @@
     <div class="toprule">
     </div>
     <p class="menu">
-      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer information</a> | <a href="default.htm">OpenType Specification</a> | Overview</p>
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft 版式</a> | <a href="http://www.microsoft.com/typography/creators.htm">开发者信息</a> | <a href="default.htm">OpenType 规范</a> | 概述</p>
     <div class="middlerule">
     </div>
     <div class="contents">
-      <h1>Overview</h1>
-      <p>The OpenType font format is an extension of the TrueType font format, adding support for PostScript font data. The OpenType font format was developed jointly by Microsoft and Adobe. OpenType fonts and the operating system services which support OpenType fonts provide users with a simple way to install and use fonts, whether the fonts contain TrueType outlines or CFF (PostScript) outlines.</p>
-      <p>The OpenType font format addresses the following goals:<br></p>
+      <h1>概述</h1>
+      <p>OpenType 字体的格式是格式的 TrueType 字体，添加支持 PostScript 字体数据的扩展。OpenType 字体的格式是由微软和 Adobe 联合开发的。OpenType 字体和支持 OpenType 字体的操作系统服务为用户提供的简单方法，安装和使用的字体，无论字体包含 TrueType 轮廓或 CFF (PostScript) 大纲。</p>
+      <p>OpenType 字体格式解决了以下目标：<br></p>
       <ul>
-        <li>broader multi-platform support</li>
-        <li>better support for international character sets</li>
-        <li>better protection for font data</li>
-        <li>smaller file sizes to make font distribution more efficient</li>
-        <li>broader support for advanced typographic control</li>
+        <li>更广泛的多平台支持</li>
+        <li>更好地支持国际字符集</li>
+        <li>更好地保护字体数据</li>
+        <li>较小的文件大小，使字体分布更有效率</li>
+        <li>广泛的支持更高级版式控制</li>
       </ul>
-      <p>OpenType fonts are also referred to as TrueType Open v.2.0 fonts, because they use the TrueType 'sfnt' font file format. PostScript data included in OpenType fonts may be directly rasterized or converted to the TrueType outline format for rendering, depending on which rasterizers have been installed in the host operating system. But the user model is the same: OpenType fonts just work. Users will not need to be aware of the type of outline data in OpenType fonts. And font creators can use whichever outline format they feel provides the best set of features for their work, without worrying about limiting a font's usability.</p>
-      <p>OpenType fonts can include the OpenType Layout tables, which allow font creators to design better international and high-end typographic fonts. The OpenType Layout tables contain information on glyph substitution, glyph positioning, justification, and baseline positioning, enabling text-processing applications to improve text layout.</p>
-      <p>As with TrueType fonts, OpenType fonts allow the handling of large glyph sets using Unicode encoding. Such encoding allows broad international support, as well as support for typographic glyph variants.</p>
-      <p>Additionally, OpenType fonts may contain digital signatures, which allows operating systems and browsing applications to identify the source and integrity of font files, including embedded font files obtained in web documents, before using them. Also, font developers can encode embedding restrictions in OpenType fonts, and these restrictions cannot be altered in a font signed by the developer.</p>
-      <h2>Related documentation</h2>
-      <p>The following documents may be consulted for further information:</p>
+      <p>OpenType 字体也称为 TrueType 打开 v.2.0 字体，因为它们使用 TrueType 'sfnt' 字体文件格式。后记在 OpenType 字体中包含的数据可能直接被栅格化或转换为 TrueType 大纲格式呈现，具体取决于所监测仪平台已安装在主机操作系统中。但用户模型是一样的： OpenType 字体只是工作。用户不需要了解在 OpenType 字体轮廓数据的类型。字体创建者可以使用他们觉得无论大纲格式提供了最佳的功能集为他们的工作，而不用担心限制字体的可用性。</p>
+      <p>OpenType 字体可以包括允许字体创作者以更好地设计国际高端版式字体的 OpenType 版式表格。OpenType 布局的表包含有关标志符号替换、 标志符号定位、 论证、 和基线定位、 启用文本处理应用程序以改进文本布局的信息。</p>
+      <p>如使用 TrueType 字体，OpenType 字体允许的处理大字形设置使用 Unicode 编码。这种编码允许国际社会的广泛支持，以及对印刷符号变量的支持。</p>
+      <p>此外，OpenType 字体可能包含数字签名，它允许操作系统和浏览应用程序能够识别的源和字体文件的完整性，包括嵌入的字体文件在 web 文档中，在使用它们之前获得。另外，字体开发人员可以编码 OpenType 字体的嵌入限制和这些限制不能由开发人员签名的字体改变。</p>
+      <h2>相关的文档</h2>
+      <p>下列文件可能为进一步信息咨询：</p>
       <dl>
         <dt>
           <em>
-            <a href="5176.cff.pdf">Adobe Technical Note #5176: &ldquo;The Compact Font Format Specification.&rdquo;</a>
+            <a href="5176.cff.pdf">Adobe 技术说明 #5176： &ldquo;紧凑字体格式规范&rdquo;</a>
           </em>
         </dt>
         <dt>
           <em>
-            <a href="5177.type2.pdf">Adobe Technical Note #5177: &ldquo;Type 2 Charstring Format.&rdquo;</a>
+            <a href="5177.type2.pdf">Adobe 技术说明 #5177：&ldquo;Type 2 Charstring 格式. &rdquo;</a>
           </em>
         </dt>
         <dt>
-          <em>TrueType 1.0 Font Files, Technical Specification.</em> Microsoft.</dt>
+          <em>TrueType 字体 1.0 文件、 技术规范。</em> Microsoft.</dt>
         <dt>
-          <em>OpenType Layout Font Specification.</em> Microsoft.</dt>
+          <em>布局 OpenType 字体规范。</em> Microsoft.</dt>
         <dt>
-          <em>Adobe Type 1 Font Format.</em>
+          <em>Adobe Type 1 的字体格式。</em>
         </dt>
-        <dd>Addison Wesley, 1991; ISBN 0-201-57044-0.</dd>
+        <dd>艾迪生韦斯利(Addison Wesley,)，1991 年;ISBN(国际标准书号) 0-201-57044-0.</dd>
         <dt>
-          <em>Technical Note #5015: &ldquo;The Type 1 Font Format Supplement.&rdquo;</em>
+          <em>技术说明 #5015： &ldquo;The Type 1 的字体格式补充资料 .&rdquo;</em>
         </dt>
-        <dd>This document contains all updates to the Type 1 format.</dd>
+        <dd>本文档包含对 Type 1 格式的所有更新。</dd>
         <dt>
-          <em>Adobe Technical Note #5087: &ldquo;Multiple Master Font Programs for the Macintosh.&rdquo;</em>
+          <em>Adobe 技术说明 #5087： &ldquo;多个母版字体程序 macintosh &rdquo;</em>
         </dt>
         <dt>
-          <em>Adobe Technical Note #5088 &ldquo;Font Naming Issues.&rdquo;</em>
+          <em>Adobe 技术说明 #5088  &ldquo;字体命名发布.&rdquo;</em>
         </dt>
-        <dd>This document discusses general font name issues.</dd>
+        <dd>本文档讨论一般的字体的名称问题.</dd>
       </dl>
       <hr class="separator">
-      <p class="fineprint">This page was last updated 22 March 2001.</p>
-      <p class="fineprint">&copy; 2001 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/info/cpyright.mspx">Terms of use</a>.</p>
-      <p class="fineprint">Comments to the MST group: <a href="/typography/AboutMST.mspx">how to contact us</a>.</p>
+      <p class="fineprint">此页面最后更新 2001 年 3 月 22 日。</p>
+      <p class="fineprint">&copy; 2001 年微软公司。保留所有的权利。<a href="http://www.microsoft.com/info/cpyright.mspx">使用条款</a>.</p>
+      <p class="fineprint">到 MST 组评论： <a href="/typography/AboutMST.mspx">如何联系我们</a>.</p>
     </div>
     <div class="middlerule">
     </div>
     <p class="menu">
-      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer information</a> | <a href="default.htm">OpenType specification</a> | Overview</p>
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft 版式</a> | <a href="http://www.microsoft.com/typography/creators.htm">开发者信息</a> | <a href="default.htm">OpenType 规范</a> | 概述</p>
     <div class="bottomrule">
     </div>
   </body>
