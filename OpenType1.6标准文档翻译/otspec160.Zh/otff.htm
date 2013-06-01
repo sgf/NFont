@@ -9,60 +9,61 @@
     <div class="toprule">
     </div>
     <p class="menu">
-      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | The OpenType font file</p>
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft 版式</a> | <a href="http://www.microsoft.com/typography/creators.htm">开发者...</a> | <a href="default.htm">OpenType 规范</a> |  OpenType 字体文件</p>
     <div class="middlerule">
     </div>
     <div class="contents">
-      <h1>The OpenType Font File</h1>
-      <p>An OpenType font file contains data, in table format, that comprises either a TrueType or a PostScript outline font. Rasterizers use combinations of data from the tables contained in the font to render the TrueType or PostScript glyph outlines. Some of this supporting data is used no matter which outline format is used; some of the supporting data is specific to either TrueType or PostScript.</p>
-      <h2>Filenames</h2>
-      <p>OpenType fonts may have the extension .OTF or .TTF, depending on the kind of outlines in the font and the creator's desire for compatibility on systems without native OpenType support.</p>
+      <h1>OpenType 字体文件</h1>
+      <p>OpenType 字体文件包含的数据，表的格式，包括 TrueType 或者 PostScript 轮廓字体。光栅化器 使用字体中包含的表的数据的组合呈现的 TrueType 或 PostScript 字形轮廓。这部分中的一些数据不管使用什么样的轮廓数据，而另外也有一些数据则是特定于 TrueType 或PostScript支持。</p>
+      <h2>文件名</h2>
+      <p>OpenType 字体可能具有扩展名 .OTF 或者 .TTF，这主要根据 字体中轮廓的类型(the kind of outlines) 以及 创建者在系统上对非原生OpenType 兼容性方面支持的期望。。
+根据大纲中的字体和没有本机 OpenType 支持的系统上的兼容性的造物者的愿望的类型。</p>
       <ul>
-        <li>In all cases, fonts with only CFF data (no TrueType outlines) always have an .OTF extension.</li>
-        <li>Fonts containing TrueType outlines may have either .OTF or .TTF, depending on the desire for backward compatibility on older systems or with previous versions of the font. TrueType Collection fonts should have a .TTC extension whether or not the fonts have OpenType layout tables present.</li>
+        <li>在任何情况下，只有 CFF 数据的字体 （无 TrueType 概述） 总是 .OTF 扩展名。</li>
+        <li>包含 TrueType 轮廓字体可能有也.OTF 或 .TTF，取决于在旧系统上或与以前版本的字体的向后兼容性的期望。TrueType字体集合应该有.TTC 扩展名，以区分字体是否有当前的 OpenType 版式表格。</li>
       </ul>
-      <h2>Data Types</h2>
-      <p>The following data types are used in the OpenType font file. All OpenType fonts use Motorola-style byte ordering (Big Endian):</p>
+      <h2>Data Types（数据类型）</h2>
+      <p>OpenType 字体文件中使用下列数据类型。所有 OpenType 字体都使用摩托罗拉样式字节排序 (大字节序）：</p>
       <table class="gray">
         <tr>
-          <th style="width: 100;">Data Type</th>
-          <th style="width: 380;">Description</th>
+          <th style="width: 100;">DataTypes/数据类型</th>
+          <th style="width: 380;">Description/说明</th>
         </tr>
         <tr>
           <td>BYTE</td>
-          <td>8-bit unsigned integer.</td>
+          <td>8-bit unsigned integer./8 位无符号的整数。</td>
         </tr>
         <tr>
           <td>CHAR</td>
-          <td>8-bit signed integer.</td>
+          <td>8-bit signed integer./8 位有符号的整数。</td>
         </tr>
         <tr>
           <td>USHORT</td>
-          <td>16-bit unsigned integer.</td>
+          <td>16-bit unsigned integer./	16 位无符号的整数。</td>
         </tr>
         <tr>
           <td>SHORT</td>
-          <td>16-bit signed integer.</td>
+          <td>16-bit signed integer./16 位有符号的整数。</td>
         </tr>
         <tr>
           <td>UINT24</td>
-          <td>24-bit unsigned integer.</td>
+          <td>24-bit unsigned integer./	24 位无符号的整数。</td>
         </tr>
         <tr>
           <td>ULONG</td>
-          <td>32-bit unsigned integer.</td>
+          <td>32-bit unsigned integer./	32 位无符号的整数。</td>
         </tr>
         <tr>
           <td>LONG</td>
-          <td>32-bit signed integer.</td>
+          <td>32-bit signed integer./32 位有符号的整数。</td>
         </tr>
         <tr>
           <td>Fixed</td>
-          <td>32-bit signed fixed-point number (16.16)</td>
+          <td>32-bit signed fixed-point number (16.16)/32-位符号定点数 (16.16)</td>
         </tr>
         <tr>
           <td>FUNIT</td>
-          <td>Smallest measurable distance in the em space.</td>
+          <td>Smallest measurable distance in the em space./在 em 的空间的最小可测距离。</td>
         </tr>
         <tr>
           <td>FWORD</td>
@@ -70,36 +71,36 @@
         </tr>
         <tr>
           <td>UFWORD</td>
-          <td>16-bit unsigned integer (USHORT) that describes a quantity in FUnits.</td>
+          <td>16-bit unsigned integer (USHORT) that describes a quantity in FUnits./16 位带符号整数 (短)，描述中 FUnits（F单元） 的数量。</td>
         </tr>
         <tr>
           <td>F2DOT14</td>
-          <td>16-bit signed fixed number with the low 14 bits of fraction (2.14).</td>
+          <td>16-bit signed fixed number with the low 14 bits of fraction (2.14)./16 位无符号的整数 （USHORT) 描述中 FUnits 的数量。</td>
         </tr>
         <tr>
           <td>LONGDATETIME</td>
-          <td>Date represented in number of seconds since 12:00 midnight, January 1, 1904. The value is represented as a signed 64-bit integer.</td>
+          <td>Date represented in number of seconds since 12:00 midnight, January 1, 1904. The value is represented as a signed 64-bit integer./在 1904 年 1 月 1 日午夜 12:00 以来的秒数表示的日期。值被表示作为 64 位有符号整数。</td>
         </tr>
         <tr>
           <td>Tag</td>
-          <td>Array of four uint8s (length = 32 bits) used to identify a script, language system, feature, or baseline</td>
+          <td>Array of four uint8s (length = 32 bits) used to identify a script, language system, feature, or baseline/四个 uint8s 的数组 （长度 = 32 位） 用于标识脚本、 语言系统、 功能或基线</td>
         </tr>
         <tr>
           <td>GlyphID</td>
-          <td>Glyph index number, same as uint16(length = 16 bits)</td>
+          <td>Glyph index number, same as uint16(length = 16 bits)/标志符号索引号，uint16 相同 （长度 = 16 位)</td>
         </tr>
         <tr>
           <td>Offset</td>
-          <td>Offset to a table, same as uint16 (length = 16 bits), NULL offset = 0x0000</td>
+          <td>Offset to a table, same as uint16 (length = 16 bits), NULL offset = 0x0000/偏移到表中，uint16 相同 (长度 = 16 位)，为空值的偏移量 = 0x0000</td>
         </tr>
       </table>
-      <p>The F2DOT14 format consists of a signed, 2's complement mantissa and an unsigned fraction. To compute the actual value, take the mantissa and add the fraction. Examples of 2.14 values are:</p>
+      <p>F2DOT14 格式包含一个签名，2 尾数和一个无符号的分数的补充。若要计算的实际值，采取尾数和添加该分数。2.14 值的示例如下：</p>
       <table class="gray">
         <tr>
-          <th style="width: 100;">Decimal Value</th>
-          <th style="width: 130;">Hex Value</th>
-          <th style="width: 130;">Mantissa</th>
-          <th style="width: 120;">Fraction</th>
+          <th style="width: 100;">Decimal Value/十进制值</th>
+          <th style="width: 130;">Hex Value/十六进制值</th>
+          <th style="width: 130;">Mantissa/尾数</th>
+          <th style="width: 120;">Fraction/分数</th>
         </tr>
         <tr>
           <td>1.999939</td>
@@ -138,85 +139,85 @@
           <td>0/16384</td>
         </tr>
       </table>
-      <h2>Version Numbers</h2>
-      <p>Most tables have version numbers, and the version number for the entire font is contained in the Table Directory. Note that there are two different table version number types, each with its own numbering scheme. USHORT version numbers always start at zero (0). Fixed version numbers start at one (1.0 or 0x00010000), except where noted (EBDT, EBLC and EBSC tables).</p>
-      <p>Implementations reading tables must include code to check version numbers so that if and when the format and therefore the version number changes, older implementations will reject newer versions gracefully, if the changes are incompatible.</p>
-      <p>When a Fixed number is used as a version, the upper 16 bits comprise a major version number, and the lower 16 bits a minor. Tables with non-zero minor version numbers always specify the literal value of the version number since the normal representation of Fixed numbers is not necessarily followed. For example, the version number of 'maxp' table version 0.5 is 0x00005000, and that of 'vhea' table version 1.1 is 0x00011000. If an implementation understands a major version number, then it can safely proceed reading the table. The minor version number indicates extensions to the format that are undetectable by implementations that do not support them.</p>
-      <p>The only exception to this is the Offset Table's sfnt version. This serves solely to identify whether the OpenType font contains TrueType outlines (a value of 1.0) or CFF data (the tag 'OTTO'), as described in the section below, 'Organization of an OpenType font.'</p>
-      <p>When a USHORT number is used to indicate version, it should be treated as though it were a minor version number; i.e., all format changes are compatible extensions.</p>
-      <h2>Organization of an OpenType Font</h2>
-      <p>A key characteristic of the OpenType format is the TrueType sfnt &ldquo;wrapper&rdquo;, which provides organization for a collection of tables in a general and extensible manner.</p>
-      <p>The OpenType font with the Offset Table. If the font file contains only one font, the Offset Table will begin at byte 0 of the file. If the font file is a TrueType collection, the beginning point of the Offset Table for each font is indicated in the TTCHeader.</p>
+      <h2>版本号码</h2>
+      <p>大多数表版本号，和整个字体的版本号载于表的目录中。请注意有两个不同的表版本数字类型，每个都有自己的编号方案。USHORT 版本数始终为零 (0) 开始。(1.0 或 0x00010000)，除非是在哪里的固定的版本号码开始注意到 （EBDT、 EBLC 和 EBSC 表）。.</p>
+      <p>读表的实现必须包括代码以检查版本编号以便当如果和格式，因此版本数量时的变化，旧的实现将优雅，拒绝较新的版本，是否所做的更改不兼容。</p>
+      <p>当作为一个版本使用一个固定的数字时，高 16 位包括主要版本数和一个未成年人低 16 位。具有非零的次要版本号的表总是指定版本编号的文本的值，因为固定号码的正常表示形式不一定遵循。例如，'maxp' 表版本 0.5 的版本号是 0x00005000，和 'vhea' 表 1.1 版的是 0x00011000。如果执行了解主要版本数，然后它可以安全地进行阅读，表了。次要版本号指示扩展到格式都察觉不到由不支持它们的实现。</p>
+      <p>唯一的例外是偏移量表的 sfnt 版本。此服务只用于标识是否 OpenType 字体包含 TrueType 轮廓 （1.0 的值） 或 CFF 数据 （标签 '奥多'），如所述在部分下面，'OpenType 字体的组织'。</p>
+      <p>似乎这是一个未成年的版本号 ； 当 USHORT 数用来表示版本时，它应被视为即，所有格式更改都都兼容性扩展。</p>
+      <h2>OpenType 字体 结构的组织</h2>
+      <p>OpenType 格式的一个关键特征是 TrueType sfnt&ldquo;包装&rdquo;，以一般和可扩展的方式提供组织的表的集合。</p>
+      <p>OpenType 字体与偏移量表。如果字体文件包含只有一个字体，偏移量表将在该文件的第 0 个字节开始。如果字体文件是 TrueType 集合，起始点的偏移量表，每个字体被表示在 TTCHeader 中。</p>
       <table class="gray">
-        <caption>Offset Table</caption>
+        <caption>偏移量的表</caption>
         <tr>
-          <th style="width: 100;">Type</th>
-          <th style="width: 100;">Name</th>
-          <th style="width: 280;">Description</th>
+          <th style="width: 100;">Type/类型</th>
+          <th style="width: 100;">Name/名称</th>
+          <th style="width: 280;">Description/说明</th>
         </tr>
         <tr>
           <td>Fixed</td>
           <td>sfnt version</td>
-          <td>0x00010000 for version 1.0.</td>
+          <td>0x00010000 for version 1.0./0x00010000 为 1.0 版本。</td>
         </tr>
         <tr>
           <td>USHORT</td>
           <td>numTables</td>
-          <td>Number of tables.</td>
+          <td>Number of tables./表的数量。</td>
         </tr>
         <tr>
           <td>USHORT</td>
           <td>searchRange</td>
-          <td>(Maximum power of 2 &lt;= numTables) x 16.</td>
+          <td>(Maximum power of 2 &lt;= numTables) x 16./（最大 2 的幂，< = numTables) x 16。</td>
         </tr>
         <tr>
           <td>USHORT</td>
           <td>entrySelector</td>
-          <td>Log2(maximum power of 2 &lt;= numTables).</td>
+          <td>Log2(maximum power of 2 &lt;= numTables)./Log2 (最大 2 的幂，< = numTables)。</td>
         </tr>
         <tr>
           <td>USHORT</td>
           <td>rangeShift</td>
-          <td>NumTables x 16-searchRange.</td>
+          <td>NumTables x 16-searchRange./NumTables x 16-searchRange。</td>
         </tr>
       </table>
-      <p>OpenType fonts that contain TrueType outlines should use the value of 1.0 for the sfnt version. OpenType fonts containing CFF data should use the tag 'OTTO' as the sfnt version number.</p>
+      <p>OpenType 字体包含 TrueType 轮廓应使用 sfnt 版本 1.0 的值。OpenType 字体包含 CFF 数据应使用的标记 'OTTO' 作为 sfnt 版本编号。</p>
       <blockquote>
-        <p>NOTE: The Apple specification for TrueType fonts allows for 'true' and 'typ1' for sfnt version. These version tags should not be used for fonts which contain OpenType tables.</p>
+        <p>注： TrueType 字体的苹果规范允许的 'true' 和 'typ1' sfnt 版本。这些 版本标记 不应该用于包含 OpenType 表的字体。</p>
       </blockquote>
-      <p>The Offset Table is followed immediately by the Table Record entries. Entries in the Table Record must be sorted in ascending order by tag. Offset values in the Table Record are measured from the start of the font file.</p>
+      <p>偏移量表被紧跟着的表记录条目。表记录中的条目必须标记按升序顺序排序。表记录中的偏移的值是从开始的字体文件来度量。</p>
       <table class="gray">
-        <caption>Table Record</caption>
+        <caption>表记录</caption>
         <tr>
-          <th style="width: 100;">Type</th>
-          <th style="width: 100;">Name</th>
-          <th style="width: 280;">Description</th>
+          <th style="width: 100;">Type/类型</th>
+          <th style="width: 100;">Name/名称</th>
+          <th style="width: 280;">Description/说明</th>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>tag</td>
-          <td>4 -byte identifier.</td>
+          <td>4 -byte identifier./4-字节的标识符。</td>
         </tr>
         <tr>
           <td>ULONG</td>
-          <td>checkSum</td>
-          <td>CheckSum for this table.</td>
+          <td>checkSum/校验和</td>
+          <td>CheckSum for this table./此表的校验和。</td>
         </tr>
         <tr>
           <td>ULONG</td>
-          <td>offset</td>
-          <td>Offset from beginning of TrueType font file.</td>
+          <td>offset/偏移量</td>
+          <td>Offset from beginning of TrueType font file./从TrueType 字体文件的开头的偏移。</td>
         </tr>
         <tr>
           <td>ULONG</td>
-          <td>length</td>
-          <td>Length of this table.</td>
+          <td>length/长度</td>
+          <td>Length of this table./此表的长度。</td>
         </tr>
       </table>
-      <p>The Table Record makes it possible for a given font to contain only those tables it actually needs. As a result there is no standard value for numTables.</p>
-      <p>Tags are the names given to tables in the OpenType font file. All tag names consist of four characters. Names with less than four letters are allowed if followed by the necessary trailing spaces. All tag names defined within a font (e.g., table names, feature tags, language tags) must be built from printing characters represented by ASCII values 32-126.</p>
-      <h3>Calculating Checksums</h3>
-      <p>Table checksums are the unsigned sum of the longs of a given table. In C, the following function can be used to determine a checksum:</p>
+      <p>表记录使得给定字体包含只有那些它实际上需要的表。结果是没有任何标准值为 numTables。</p>
+      <p>标签是给予 OpenType 字体文件中的表的名称。所有标记名称由四个字符都组成。允许用少于四个字母的名称如果其次是必要的尾随空格。从 32-126 的 ASCII 值所代表的印刷字符必须建立在字体 （例如，表名称、 功能标签，语言标记） 内定义的所有标记名称。</p>
+      <h3>Calculating Checksums/计算校验和</h3>
+      <p>表校验和是表的无符号的一个给定多头的总和。在 C 中，可以使用下面的函数来确定一个校验和：</p>
       <pre>ULONG
 CalcTableChecksum(ULONG *Table, ULONG Length)
 {
@@ -228,63 +229,63 @@ return Sum;
 }
 </pre>
       <p>
-        <i>Note: This function implies that the length of a table must be a multiple of four bytes. In fact, a font is not considered structurally proper without the correct padding. All tables must begin on four byte boundries, and any remaining space between tables is padded with zeros. The length of all tables should be recorded in the table record with their actual length (not their padded length).</i>
+        <i>注： 此功能意味着一个表的长度必须是四个字节的倍数。事实上，字体不是结构上正确不正确填充。四个字节界限，必须开始的所有表和表之间的任何剩余空间用零填充。在他们的实际长度 （不其填充长度） 的表记录中应记录所有表的长度。</i>
       </p>
-      <p>To calculate the checkSum for the 'head' table which itself includes the checkSumAdjustment entry for the entire font, do the following:</p>
+      <p>若要计算的校验和，'head' 表本身包括整个字体的 checkSumAdjustment 项，执行下列操作：</p>
       <ol>
-        <li>Set the checkSumAdjustment to 0.</li>
-        <li>Calculate the checksum for all the tables including the 'head' table and enter that value into the table directory.</li>
-        <li>Calculate the checksum for the entire font.</li>
-        <li>Subtract that value from the hex value B1B0AFBA.</li>
-        <li>Store the result in checkSumAdjustment.</li>
+        <li>将 checkSumAdjustment 设置为 0。</li>
+        <li>计算校验和，包括 '头' 表的所有表和表目录输入该值。</li>
+        <li>计算出整个字体的校验和。</li>
+        <li>减去该值从 B1B0AFBA 的十六进制值。.</li>
+        <li>将结果存储在 checkSumAdjustment 中。</li>
       </ol>
-      <p>The checkSum for the head table which includes the checkSumAdjustment entry for the entire font is now incorrect. That is not a problem. Do not change it. An application attempting to verify that the 'head' table has not changed should calculate the checkSum for that table by not including the checkSumAdjustment value, and compare the result with the entry in the table directory. <br></p>
-      <h2>TrueType Collections</h2>
-      <p>A TrueType Collection (TTC) is a means of delivering multiple OpenType fonts in a single file structure. TrueType Collections are most useful when the fonts to be delivered together share many glyphs in common. By allowing multiple fonts to share glyph sets, TTCs can result in a significant saving of file space.</p>
-      <p>For example, a group of Japanese fonts may each have their own designs for the kana glyphs, but share identical designs for the kanji. With ordinary OpenType font files, the only way to include the common kanji glyphs is to copy their glyph data into each font. Since the kanji represent much more data than the kana, this results in a great deal of wasteful duplication of glyph data. TTCs were defined to solve this problem.</p>
-      <p>The CFF rasterizer does not currently support TTC files.</p>
-      <h3>The TTC File Structure</h3>
-      <p>A TrueType Collection file consists of a single TTC Header table, one or more Offset Tables with Table Directories, and a number of OpenType tables. The TTC Header must be located at the beginning of the TTC file.</p>
-      <p>The TTC file must contain a complete Offset Table and Table Directory for each font. A TTC file Table Directory has exactly the same format as a TTF file Table Directory. The table offsets in all Table Directories within a TTC file are measured from the beginning of the TTC file.</p>
-      <p>Each OpenType table in a TTC file is referenced through the Offset Table and Table Directory of each font which uses that table. Some of the OpenType tables must appear multiple times, once for each font included in the TTC; while other tables may be shared by multiple fonts in the TTC.</p>
-      <p>As an example, consider a TTC file which combines two Japanese fonts (Font1 and Font2). The fonts have different kana designs (Kana1 and Kana2) but use the same design for kanji. The TTC file contains a single 'glyf' table which includes both designs of kana together with the kanji; both fonts' Table Directories point to this 'glyf' table. But each font's Table Directory points to a different 'cmap' table, which identifies the glyph set to use. Font1's 'cmap' table points to the Kana1 region of the 'loca' and 'glyf' tables for kana glyphs, and to the kanji region for the kanji. Font2's 'cmap' table points to the Kana2 region of the 'loca' and 'glyf' tables for kana glyphs, and to the same kanji region for the kanji.</p>
-      <p>The tables that should have a unique copy per font are those that are used by the system in identifying the font and its character mapping, including 'cmap', 'name', and 'OS/2'. The tables that should be shared by fonts in the TTC are those that define glyph and instruction data or use glyph indices to access data: 'glyf', 'loca', 'hmtx', 'hdmx', 'LTSH', 'cvt ', 'fpgm', 'prep', 'EBLC', 'EBDT', 'EBSC', 'maxp', and so on. In practice, any tables which have identical data for two or more fonts may be shared.</p>
-      <p>A tool is available from Microsoft to help build .TTC files. The process involves paying close attention the issue of glyph renumbering in a font and the side effects that can result, in the 'cmap' table and elsewhere. The fonts to be merged must also have compatible TrueType instructions-that is, their preprograms, function definitions, and control values must not conflict.</p>
-      <p>TrueType Collection files use the filename suffix .TTC.</p>
-      <h3>TTC Header</h3>
-      <p>There are two versions of the TTC Header: Version 1.0 has been used for TTC files without digital signatures. Version 2.0 can be used for TTC files with <i>or</i> without digital signatures -- if there's no signature, then the last three fields of the version 2.0 header are left null.</p>
-      <p>If a digital signature is used, the DSIG table for the file must be the last table in the TTC file. Signatures in a TTC file are expected to be Format 1 signatures.</p>
-      <p>The purpose of the TTC Header table is to locate the different Offset Tables within a TTC file. The TTC Header is located at the beginning of the TTC file (offset = 0). It consists of an identification tag, a version number, a count of the number of OpenType fonts in the file, and an array of offsets to each Offset Table.</p>
+      <p>现在，其中包括整个字体的 checkSumAdjustment 条目头表的校验和不正确。这不是问题。请不要更改它。试图验证的 '头' 表已不更改应用程序应计算的校验和，该表所不包括的 checkSumAdjustment 值，并比较结果与表目录中的条目。 <br></p>
+      <h2>TrueType Collections/（集合）</h2>
+      <p>一个 TrueType 集合 (TTC) i是提供单个文件结构中的多个 OpenType 字体的一种手段。字体，以一起传送的共同分享很多字形，TrueType 集合时最有用。通过允许多个字体，以共享标志符号集，TTCs 可能会导致文件空间的节省大量成本。</p>
+      <p>例如，一组日本字体可能每个有他们自己设计的假名的标志符号，但共享相同设计的日文汉字。与普通 OpenType 字体文件，包括常见的日文汉字字形的唯一方法是将其字形数据复制到每个字体。由于日文汉字代表更多的数据比假名，这导致大量的标志符号数据的重复浪费。TTCs 被定义为解决这一问题。</p>
+      <p>CFF 光栅化程序目前不支持 TTC 文件。</p>
+      <h3>The TTC File Structur/（TTC 文件结构）</h3>
+      <p>TrueType 集合文件包含单个 TTC 头表、 一个或多个偏移量表与表的目录和 OpenType 表数目。TTC 头必须设在 TTC 文件的开头。</p>
+      <p>TTC 文件的每个字体，都必须包含一个完整的偏移量表和表目录。TTC 文件表的目录作为专题信托基金文件表的目录有完全相同的格式。在 TTC 文件中的所有表目录表偏移量从 TTC 文件的开头进行计量。</p>
+      <p>TTC 文件中的每个 OpenType 表是通过的偏移量表和表目录使用该表的每种字体的引用。某些 OpenType 表必须列入 TTC ； 每种字体出现多次，一次虽然可能由多个字体中 TTC 共享其他表。</p>
+      <p>作为一个例子，考虑一个 TTC 文件，它结合了两个日文字体 （Font1 和 Font2）。字体有不同假名设计 （Kana1 和 Kana2），但是对于日文汉字使用相同的设计。TTC 文件中包含单个 'glyf' 表，其中包括这两个设计的假名和汉字 ；这两种字体的表目录指向此 'glyf' 表。但每个字体表目录点到一个不同的 'cmap' 表，用于标识标志符号设置为使用。Font1 的 'cmap' 表点对 Kana1 地区的假名字形的 '疯狂' 和 'glyf' 表和汉字的日文汉字区域。Font2 的 'cmap' 表点对 Kana2 地区的假名字形的 'loca' 和 'glyf' 表和同一汉字区域为日文汉字。</p>
+      <p>表，应具有独特副本的每个字体是那些所使用的系统在确定中的字体和其字符映射，包括 'cmap'、 'name' 和"OS/2"。表应由共享字体在 TTC 的是那些定义标志符号和指令数据或使用标志符号索引来访问数据： 'glyf'、 'loca'，'hmtx'，'hdmx'，'LTSH'、 'cvt'、 'fpgm'，'prep'、 'EBLC'、 'EBDT'、 'EBSC'、 'maxp'，等等。在实践中，有两个或多个字体的相同数据的任何表可能被共享。</p>
+      <p>是一种工具可从 Microsoft 帮助生成。TTC 文件。此过程涉及的标志符号将重编在字体和能结果，在 'cmap' 表和其他地方的副作用问题密切关注。要合并的字体还必须具有兼容的 TrueType 说明-就是其方案，函数定义和控制值必须不冲突。</p>
+      <p>TrueType 集合文件要使用的文件名后缀.TTC。</p>
+      <h3>TTC Header（标头）</h3>
+      <p>有的 TTC 标头的两个版本： 1.0 版已用于 TTC 文件没有数字签名。版本 2.0 可以用于 TTC 文件<i>或</i>无数字签名 — — 如果有没有签名，然后，最后三个版本 2.0 标头字段留空。</p>
+      <p>如果使用了数字签名，则为该文件的 DSIG 表必须是 TTC 文件中的最后一个表。TTC 文件中的签名，预计将Format 1 签名。</p>
+      <p>TTC 头表的目的是在 TTC 文件内定位在不同的偏移量表。TTC 页眉位于 TTC 文件的开头 （offset = 0)。它包括识别标记、 版本编号、 在文件中，OpenType 字体的数量和数组的偏移量，偏移量的每个表的计数。</p>
       <table class="gray">
-        <caption>TTC Header Version 1.0</caption>
+        <caption>TTC Header Version 1.0/TTC 标头版本 1.0</caption>
         <tr>
-          <th style="width: 100;">Type</th>
-          <th style="width: 100;">Name</th>
-          <th style="width: 280;">Description</th>
+          <th style="width: 100;">Type/类型</th>
+          <th style="width: 100;">Name/名称</th>
+          <th style="width: 280;">Description/说明</th>
         </tr>
         <tr>
           <td>TAG</td>
           <td>TTCTag</td>
-          <td>TrueType Collection ID string: 'ttcf'</td>
+          <td>TrueType Collection ID string: 'ttcf'/TrueType 集合 ID 字符串： 'ttcf'</td>
         </tr>
         <tr>
           <td>FIXED</td>
-          <td>Version</td>
-          <td>Version of the TTC Header (1.0), 0x00010000</td>
+          <td>Version/版本</td>
+          <td>Version of the TTC Header (1.0), 0x00010000/版本的 TTC 头 (1.0) 0x00010000</td>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>numFonts</td>
-          <td>Number of fonts in TTC</td>
+          <td>Number of fonts in TTC/TTC 中字体的数量</td>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>OffsetTable[numFonts]</td>
-          <td>Array of offsets to the OffsetTable for each font from the beginning of the file</td>
+          <td>Array of offsets to the OffsetTable for each font from the beginning of the file/对每种字体 OffsetTable 从文件的开头的偏移量的数组</td>
         </tr>
       </table>
       <table class="gray">
-        <caption>TTC Header Version 2.0</caption>
+        <caption>TTC Header Version 2.0/TTC 标头版本 2.0</caption>
         <tr>
           <th style="width: 100;">Type</th>
           <th style="width: 100;">Name</th>
@@ -293,44 +294,44 @@ return Sum;
         <tr>
           <td>TAG</td>
           <td>TTCTag</td>
-          <td>TrueType Collection ID string: 'ttcf'</td>
+          <td>TrueType Collection ID string: 'ttcf'/TrueType 集合 ID 字符串： 'ttcf'</td>
         </tr>
         <tr>
           <td>FIXED</td>
           <td>Version</td>
-          <td>Version of the TTC Header (2.0), 0x00020000</td>
+          <td>Version of the TTC Header (2.0), 0x00020000/版本的 TTC 头 (2.0) 0x00020000</td>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>numFonts</td>
-          <td>Number of fonts in TTC</td>
+          <td>Number of fonts in TTC/TTC 中字体的数量</td>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>OffsetTable[numFonts]</td>
-          <td>Array of offsets to the OffsetTable for each font from the beginning of the file</td>
+          <td>Array of offsets to the OffsetTable for each font from the beginning of the file/对每种字体 OffsetTable 从文件的开头的偏移量的数组</td>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>ulDsigTag</td>
-          <td>Tag indicating that a DSIG table exists, 0x44534947 ('DSIG') (null if no signature)</td>
+          <td>Tag indicating that a DSIG table exists, 0x44534947 ('DSIG') (null if no signature)/标记，指示 DSIG 表存在，0x44534947 ('DSIG'） （如果没有签名，则为 null）</td>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>ulDsigLength</td>
-          <td>The length (in bytes) of the DSIG table (null if no signature)</td>
+          <td>The length (in bytes) of the DSIG table (null if no signature)/	DSIG 表 （如果没有签名，则为 null） 的长度 （以字节为单位）</td>
         </tr>
         <tr>
           <td>ULONG</td>
           <td>ulDsigOffset</td>
-          <td>The offset (in bytes) of the DSIG table from the beginning of the TTC file (null if no signature)</td>
+          <td>The offset (in bytes) of the DSIG table from the beginning of the TTC file (null if no signature)/DSIG 表从 TTC 文件 （如果没有签名，则为 null） 的开头的偏移量 （以字节为单位）</td>
         </tr>
       </table>
-      <h2>Font Tables</h2>
-      <p>The rasterizer has a much easier time traversing tables if they are padded so that each table begins on a 4-byte boundary. It is highly recommended that all tables be long-aligned and padded with zeroes.</p>
-      <A NAME="otttables"><h1>OpenType Tables</h1></A>
-      <p>Whether TrueType or PostScript outlines are used in an OpenType font, the following tables are required for the font to function correctly:</p>
-      <h2>Required Tables</h2>
+      <h2>Font Tables/（字体表）</h2>
+      <p>光栅化程序有一个容易得多的时间，遍历表，如果他们填充，每个表在 4 字节边界上开始。强烈建议所有的表是长对齐，用零填充。</p>
+      <A NAME="otttables"><h1>OpenType Tables/（OpenType 表）</h1></A>
+      <p>是否在 OpenType 字体中使用 TrueType 或 PostScript 轮廓，下面的表都需要的字体才能正常工作：</p>
+      <h2>所需的表</h2>
       <table class="gray">
         <tr>
           <th style="width: 100;">Tag</th>
@@ -340,53 +341,53 @@ return Sum;
           <td>
             <a href="cmap.htm">cmap</a>
           </td>
-          <td>Character to glyph mapping</td>
+          <td>Character to glyph mapping/标志符号映射到的字符</td>
         </tr>
         <tr>
           <td>
             <a href="head.htm">head</a>
           </td>
-          <td>Font header</td>
+          <td>Font header/字体标头</td>
         </tr>
         <tr>
           <td>
             <a href="hhea.htm">hhea</a>
           </td>
-          <td>Horizontal header</td>
+          <td>Horizontal header/水平标头</td>
         </tr>
         <tr>
           <td>
             <a href="hmtx.htm">hmtx</a>
           </td>
-          <td>Horizontal metrics</td>
+          <td>Horizontal metrics/水平度量</td>
         </tr>
         <tr>
           <td>
             <a href="maxp.htm">maxp</a>
           </td>
-          <td>Maximum profile</td>
+          <td>Maximum profile/最大轮廓</td>
         </tr>
         <tr>
           <td>
             <a href="name.htm">name</a>
           </td>
-          <td>Naming table</td>
+          <td>Naming table/命名表</td>
         </tr>
         <tr>
           <td>
             <a href="os2.htm">OS/2</a>
           </td>
-          <td>OS/2 and Windows specific metrics</td>
+          <td>OS/2 and Windows specific metrics/ OS/2 和 Windows 的 特定指标（指标 亦译为 度量）</td>
         </tr>
         <tr>
           <td>
             <a href="post.htm">post</a>
           </td>
-          <td>PostScript information</td>
+          <td>PostScript information/PostScript 信息</td>
         </tr>
       </table>
-      <p>For OpenType fonts based on TrueType outlines, the following tables are used:</p>
-      <h2>Tables Related to TrueType Outlines</h2>
+      <p>对于基于 TrueType 轮廓的 OpenType 字体，使用下面的表：</p>
+      <h2>Tables Related to TrueType Outlines/相关的 TrueType 轮廓表</h2>
       <table class="gray">
         <tr>
           <th style="width: 100;">Tag</th>
@@ -396,189 +397,189 @@ return Sum;
           <td>
             <a href="cvt.htm">cvt</a>
           </td>
-          <td>Control Value Table</td>
+          <td>Control Value Table/控制值表</td>
         </tr>
         <tr>
           <td>
             <a href="fpgm.htm">fpgm</a>
           </td>
-          <td>Font program</td>
+          <td>Font program/字体的程序</td>
         </tr>
         <tr>
           <td>
             <a href="glyf.htm">glyf</a>
           </td>
-          <td>Glyph data</td>
+          <td>Glyph data/标志符号数据</td>
         </tr>
         <tr>
           <td>
             <a href="loca.htm">loca</a>
           </td>
-          <td>Index to location</td>
+          <td>Index to location/索引到的位置</td>
         </tr>
         <tr>
           <td>
             <a href="prep.htm">prep</a>
           </td>
-          <td>CVT Program</td>
+          <td>CVT Program/CVT程序</td>
         </tr>
       </table>
-      <p>The PostScript font extensions define a new set of tables containing data specific to PostScript fonts that are used instead of the tables listed above.</p>
-      <h2>Tables Related to PostScript Outlines</h2>
+      <p>PostScript 字体扩展定义了一套新的包含特定于 PostScript 字体而不是上面列出的表所使用的数据的表。.</p>
+      <h2>相关的 PostScript 轮廓表</h2>
       <table class="gray">
         <tr>
-          <th style="width: 100;">Tag</th>
-          <th style="width: 360;">Name</th>
+          <th style="width: 100;">Tag/标记</th>
+          <th style="width: 360;">Name/名称</th>
         </tr>
         <tr>
           <td>
             <a href="cff.htm">CFF</a>
           </td>
-          <td>PostScript font program (compact font format)</td>
+          <td>PostScript font program (compact font format)/PostScript 字体程序 (紧凑字体格式)</td>
         </tr>
         <tr>
           <td>
             <a href="vorg.htm">VORG</a>
           </td>
-          <td>Vertical Origin</td>
+          <td>Vertical Origin/垂直起点</td>
         </tr>
       </table>
-      <p>It is strongly recommended that CFF OpenType fonts that are used for vertical writing include a <a href="vorg.htm"> Vertical Origin ('VORG') table</a>. Multiple Master support in OpenType, has been discontinued as of version 1.3 of the specification. The 'fvar', 'MMSD', 'MMFX' tables have hence been removed.</p>
-      <h2>Tables Related to Bitmap Glyphs</h2>
+      <p>它强烈建议用于垂直书写的 CFF OpenType 字体包括 <a href="vorg.htm">垂直起点 ('VORG') 表</a>。多个母版支持在 OpenType，从规范的 1.3 版，已停止。'fvar'，'MMSD'、 'MMFX' 表已因此被删除。</p>
+      <h2>相关的位图字形表</h2>
       <table class="gray">
         <tr>
-          <th style="width: 100;">Tag</th>
-          <th style="width: 360;">Name</th>
+          <th style="width: 100;">Tag/标记</th>
+          <th style="width: 360;">Name/名称</th>
         </tr>
         <tr>
           <td>
             <a href="ebdt.htm">EBDT</a>
           </td>
-          <td>Embedded bitmap data</td>
+          <td>Embedded bitmap data/嵌入的位图数据</td>
         </tr>
         <tr>
           <td>
             <a href="eblc.htm">EBLC</a>
           </td>
-          <td>Embedded bitmap location data</td>
+          <td>Embedded bitmap location data/嵌入的位图的位置数据</td>
         </tr>
         <tr>
           <td>
             <a href="ebsc.htm">EBSC</a>
           </td>
-          <td>Embedded bitmap scaling data</td>
+          <td>Embedded bitmap scaling data/嵌入的位图缩放数据</td>
         </tr>
       </table>
-      <p>OpenType fonts may also contain bitmaps of glyphs, in addition to outlines. Hand-tuned bitmaps are especially useful in OpenType fonts for representing complex glyphs at very small sizes. If a bitmap for a particular size is provided in a font, it will be used by the system instead of the outline when rendering the glyph. (Note: ATM does not currently support hinted bitmaps in OpenType fonts.) <br></p>
-      <p>There are also several optional tables that support vertical layout as well as other advanced typographic functions:</p>
-      <h2>Advanced Typographic Tables</h2>
+      <p>OpenType 字体可能还包含位图的标志符号，除了轮廓。手工调整位图，尤其有用在 OpenType 字体中用于表示复杂字形在非常小的尺寸。如果一个特定大小的位图提供一种字体，它将使用由系统而不是大纲这是呈现标志符号时。（注： ATM 目前并不支持暗示将位图在 OpenType 字体中.) <br></p>
+      <p>也有几个可选的表，支持垂直布局，以及其他先进的排版功能：</p>
+      <h2>Advanced Typographic Tables/先进的版式表</h2>
       <table class="gray">
         <tr>
-          <th style="width: 100;">Tag</th>
-          <th style="width: 360;">Name</th>
+          <th style="width: 100;">Tag/标记</th>
+          <th style="width: 360;">Name/名称</th>
         </tr>
         <tr>
           <td>
             <a href="base.htm">BASE</a>
           </td>
-          <td>Baseline data</td>
+          <td>Baseline data/基线数据</td>
         </tr>
         <tr>
           <td>
             <a href="gdef.htm">GDEF</a>
           </td>
-          <td>Glyph definition data</td>
+          <td>Glyph definition data/标志符号定义数据</td>
         </tr>
         <tr>
           <td>
             <a href="gpos.htm">GPOS</a>
           </td>
-          <td>Glyph positioning data</td>
+          <td>Glyph positioning data/定位数据的标志符号</td>
         </tr>
         <tr>
           <td>
             <a href="gsub.htm">GSUB</a>
           </td>
-          <td>Glyph substitution data</td>
+          <td>Glyph substitution data/标志符号替换数据</td>
         </tr>
         <tr>
           <td>
             <a href="jstf.htm">JSTF</a>
           </td>
-          <td>Justification data</td>
+          <td>Justification data/对齐数据</td>
         </tr>
       </table>
-      <p>For information on common table formats, please see <a href="chapter2.htm">OpenType Layout Common Table Formats </a>.</p>
-      <h2>Other OpenType Tables</h2>
+      <p>常见的表格格式的信息，请参阅<a href="chapter2.htm">OpenType 布局常见的表 格式</a>。</p>
+      <h2>Other OpenType Tables/其他 OpenType 表</h2>
       <table class="gray">
         <tr>
-          <th style="width: 100;">Tag</th>
-          <th style="width: 360;">Name</th>
+          <th style="width: 100;">Tag/标记</th>
+          <th style="width: 360;">Name/名称</th>
         </tr>
         <tr>
           <td>
             <a href="dsig.htm">DSIG</a>
           </td>
-          <td>Digital signature</td>
+          <td>Digital signature/数字签名</td>
         </tr>
         <tr>
           <td>
             <a href="gasp.htm">gasp</a>
           </td>
-          <td>Grid-fitting/Scan-conversion</td>
+          <td>Grid-fitting/Scan-conversion /（网格拟合/扫描转换）</td>
         </tr>
         <tr>
           <td>
             <a href="hdmx.htm">hdmx</a>
           </td>
-          <td>Horizontal device metrics</td>
+          <td>Horizontal device metrics/水平设备度量</td>
         </tr>
         <tr>
           <td>
             <a href="kern.htm">kern</a>
           </td>
-          <td>Kerning</td>
+          <td>Kerning/字偶间距调整</td>
         </tr>
         <tr>
           <td>
             <a href="ltsh.htm">LTSH</a>
           </td>
-          <td>Linear threshold data</td>
+          <td>Linear threshold data/线性阈值数据</td>
         </tr>
         <tr>
           <td>
             <a href="pclt.htm">PCLT</a>
           </td>
-          <td>PCL 5 data</td>
+          <td>PCL 5 data/PCL 5 数据</td>
         </tr>
         <tr>
           <td>
             <a href="vdmx.htm">VDMX</a>
           </td>
-          <td>Vertical device metrics</td>
+          <td>Vertical device metrics/垂直设备度量</td>
         </tr>
         <tr>
           <td>
             <a href="vhea.htm">vhea</a>
           </td>
-          <td>Vertical Metrics header</td>
+          <td>Vertical Metrics header/垂直设备度量 标头</td>
         </tr>
         <tr>
           <td>
             <a href="vmtx.htm">vmtx</a>
           </td>
-          <td>Vertical Metrics</td>
+          <td>Vertical Metrics/垂直度量</td>
         </tr>
       </table>
       <hr class="separator">
-      <p class="fineprint">This page was last updated 5 May 2008.</p>
-      <p class="fineprint">&copy; 2008 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.</p>
-      <p class="fineprint">Comments to the MST group: <a href="/typography/AboutMST.mspx">how to contact us</a>.</p>
+      <p class="fineprint">此页面最后更新 2008 年 5 月 5 日。</p>
+      <p class="fineprint">&copy;  2008年微软公司。保留所有的权利。 <a href="http://www.microsoft.com/Misc/cpyright.htm">使用条款</a>。</p>
+      <p class="fineprint">到 MST 组评论： <a href="/typography/AboutMST.mspx">如何联系我们</a>。</p>
     </div>
     <div class="middlerule">
     </div>
     <p class="menu">
-      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType...</a> | The OpenType font file</p>
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft 版式</a> | <a href="http://www.microsoft.com/typography/creators.htm">开发者...</a> | <a href="default.htm">OpenType...</a> | OpenType 字体文件</p>
     <div class="bottomrule">
     </div>
   </body>
