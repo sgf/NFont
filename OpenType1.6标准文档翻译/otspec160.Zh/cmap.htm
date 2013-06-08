@@ -132,7 +132,7 @@
       </h2>
       <p>如果一个platform ID 4 （自定义）, encoding ID 0-255 (OTF Windows NT 兼容性映射) 'cmap' 编码 目前在 OpenType 字体 CFF 轮廓, 然后 OTF 字体驱动程序在 Windows NT 中将： (a) 将叠加编码 Unicode 编码它向系统 ； 报告中的字符码 0-255 中的编码上相应的 Windows ANSI （代码页 1252年） Unicode 值的字形 (b) 将 Windows ANSI （字符集 0） 添加到列表中的数据支持的字体 ；和 (c) 考虑编码 ID 是一个 Windows 字符集的值并将它添加到的数据支持的字体列表中的值。注： 'cmap' 子表及其子表，必须使用 0 或 6 的格式和编码必须与 CFF 的编码相同。</p>
       <p>此 'cmap' 编码不是必需的。它提供了一个使用的字体，好象它是 Windows ANSI 编码的非 Unicode 应用程序的兼容性机制。非 Windows ANSI 类型 1 的字体，如西里尔文和中欧的字体，Adobe 在过去附带了"0"（Windows ANSI） 录得的 CharSet 字段。PFM 文件 ；ATM 为 Windows 9 x 一共忽略字符集。Adobe 提供了这种兼容性 'cmap' 中每个 OTF 转换从 Type1 字体的编码不是 StandardEncoding 的编码。</p>
-      <h2>Note on the language field in 'cmap' subtables:/关于 'cmap' 各个子表中的语言字段说明：</h2>
+      <h2 id="language">Note on the language field in 'cmap' subtables:/关于 'cmap' 各个子表中的语言字段说明：</h2>
       <p>关于 'cmap' 各个子表中的语言字段的说明： 语言字段必须设置为零，为所有的感觉神经 subtables Id 是 Macintosh （platform ID 1） 以外的平台。为其平台 Id 是 Macintosh 的感觉神经子表说明，此字段设置为的感觉神经子表加一，Macintosh 的语言 ID，或为零如果 cmap 子表不是特定于语言。例如，Mac OS 土耳其 cmap 子表必须设置此字段到 18 岁，因为土耳其的 Macintosh 的语言 ID 是 17。Mac OS 罗马 cmap 子表必须将此字段设置为 0，因为 Mac OS 罗马不特定于语言编码。</p>
       <h2>Format 0: Byte encoding table/Format 0: 字节编码表</h2>
       <p>这是 苹果标准 字符到标志符号索引的映射表。</p>
